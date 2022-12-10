@@ -4,10 +4,10 @@
     color: white;
     font-size: 15px;
     border-style: none;
-    @media  screen and (min-width:500px) {
+    @media  screen and (min-width:769px) {
         font-size: 20px;
     }
-    @media  screen and (min-width:769px) {
+    @media  screen and (min-width:1024px) {
         font-size: 28px;
     }
 }

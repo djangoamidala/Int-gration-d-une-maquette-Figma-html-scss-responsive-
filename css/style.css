@@ -39,7 +39,7 @@ body {
 }
 
 .header {
-  background-image: url(/images/eau.jpg);
+  background-image: url(../images/eau.jpg);
   background-size: cover;
   height: 300px;
   display: flex;
@@ -180,12 +180,12 @@ body {
   font-size: 15px;
   border-style: none;
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 769px) {
   .button-blue {
     font-size: 20px;
   }
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1024px) {
   .button-blue {
     font-size: 28px;
   }
