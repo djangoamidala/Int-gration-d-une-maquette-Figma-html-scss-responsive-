@@ -5,10 +5,12 @@ footer {
     
 }
 .footer_placement {
-    margin-left: 100px;
+    margin-left: 40px;
+    
     & a {
         text-decoration: none;
         color: blue;
+        font-size: 15px;
         @media  screen and (min-width:769px) {
             font-size: 20px;
             
