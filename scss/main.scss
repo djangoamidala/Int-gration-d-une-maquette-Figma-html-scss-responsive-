@@ -1,0 +1,10 @@
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter';}
+body { margin: 0;}
+
+@import '../scss/layout/nav';
+@import '../scss/layout/header';
+@import '../scss/layout/main';
+@import '../scss/layout/form';
+@import '../scss/components/buttons';
+@import '../scss/layout/footer';

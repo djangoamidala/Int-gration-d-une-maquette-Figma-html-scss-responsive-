@@ -1,0 +1,36 @@
+.header {
+    background-image: url(/images/eau.jpg);
+    background-size:cover;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    background-position: center;
+    margin-bottom: 20px;
+    @media  screen and (min-width:769px) {
+        height: 400px;
+    }
+    &_content {
+        margin: auto;
+        text-align: center;
+    }
+    &_content h2 {
+        text-align: center;
+        color: white;
+        @media  screen and (min-width:769px) {
+            font-size: 32px;
+        }
+        @media  screen and (min-width:1024px) {
+            font-size: 40px;
+        }
+    }
+    &_form input {
+        font-size: 15px;
+        height: 40px;
+        @media  screen and (min-width:769px) {
+            font-size: 25px;
+            height: 50px;
+        }
+    }
+    
+    
+}

@@ -1,0 +1,29 @@
+.first_section {
+    text-align: center;
+    margin: auto;
+    @media  screen and (min-width:769px) {
+       display: flex;
+       flex-wrap: wrap;
+    }
+    @media  screen and (min-width:1024px) {
+        flex-wrap: nowrap;
+        display: flex;
+        }
+    & article {
+        @media  screen and (min-width:769px) {
+            align-items: center;
+            margin: auto;
+            width: 50%;
+            }
+    }
+        
+    &_article p {
+        margin: auto;
+        width: 50%;
+    }
+
+    &_article-img {
+        width: 100px;
+        aspect-ratio: 1;
+    }
+}
