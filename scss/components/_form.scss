@@ -1,0 +1,55 @@
+.section_form {
+    
+    &_message {
+        background-color: rgba(128, 128, 128, 0.637);
+        padding: 16px;
+        border-radius: 20px;
+        margin: 15px auto;
+        display: flex;
+        flex-direction: column;
+        @media  screen and (min-width:768px) {
+            width: 500px;
+        }
+    }
+    &_message > div > div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+    }
+    &_message input {
+        margin-top: 15px;
+        display: flex;
+        border-radius: 20px;
+        border-style: none;
+        padding: 12px 20px;
+
+    } 
+    &_message textarea {
+        min-height: 100px;
+        border: none;
+        resize: vertical;
+        margin-top: 15px;
+        border-radius: 20px;
+    }
+    textarea::placeholder {
+        padding: 10px;
+    }
+    & h2 {
+        text-align: center;
+        margin: auto;
+    }
+    &_align {
+        display: flex;
+        flex-direction: column;
+        @media  screen and (min-width:768px) {
+            flex-direction: row;
+            gap: 30px;
+        }
+    }
+    .message-error {
+        color: rgb(199, 0, 0);
+        font-family: sans-serif;
+        font-size: 14px;
+    }
+}

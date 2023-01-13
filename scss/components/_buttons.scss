@@ -1,13 +1,25 @@
 .button-blue{
     padding: 10px;
+    cursor: pointer;
     background-color: blue;
     color: white;
     font-size: 15px;
     border-style: none;
+    border-radius: 20px;
     @media  screen and (min-width:769px) {
         font-size: 20px;
     }
     @media  screen and (min-width:1024px) {
         font-size: 28px;
     }
+}
+.section_form-button {
+   width: 100px;
+   margin: 15px;
+   @media  screen and (min-width:769px) {
+    font-size: 20px;
+}
+@media  screen and (min-width:1024px) {
+    font-size: 26px;
+}
 }

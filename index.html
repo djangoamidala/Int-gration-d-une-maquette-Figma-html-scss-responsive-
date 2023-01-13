@@ -62,40 +62,52 @@
                     veniam hic quas quos illo blanditiis, impedit pariatur doloremque perferendis vero veritatis aliquam
                     quibusdam quo.</p>
             </article>
-
         </div>
 
     </main>
 
     <hr class="solid">
-
     <section class="section_form">
         <h2>Contact us</h2>
-        <form class="section_form_message" method="post">
-            <input type="text" class="section_form_message_input" id="firstName" name="firstName"
-                placeholder="First name">
-            <input type="text" class="section_form_message_input" id="lastName" name="lastName" placeholder="Last name">
-            <input type="text" class="section_form_message_input" id="emailAddress" name="emailAddress"
-                placeholder="email address">
-            <input type="text" class="section_form_message_input" id="phoneNumber" name="phoneNumber"
-                placeholder="Phone number">
-            <textarea name="mail" class="section_form_message_textarea" rows="15"
-                placeholder="Type your mail"></textarea>
-            <button class="button-blue" type="submit">Submit</button>
+        <form class="section_form_message" id="formContact" method="post">
+            <div class="section_form_align">
+                <div>
+                    <input type="text" class="section_form_message_input" id="firstName" name="firstName" placeholder="First name">
+                    <label class="message-error" for="firstName" id="firstNameError">Renseigner votre prénom.</label>
+                </div>
+                <div>
+                    <input type="text" class="section_form_message_input" id="lastName" name="lastName" placeholder="Last name">
+                    <label class="message-error" for="lastName" id="lastNameError">What is your LastName?</label>
+                </div>
+            </div>
+            <div class="section_form_align">
+                <div>
+                    <input type="text" class="section_form_message_input" id="email" name="email" placeholder="email address">
+                    <label class="message-error" for="address" id="emailError">What is your email?.</label>
+                </div>
+                <div>
+                    <input type="text" class="section_form_message_input" id="phone" name="phone" placeholder="Phone number">
+                    <label class="message-error" for="phone" id="phoneError">What is your phone number?</label>
+                </div>
+            </div>
+            <textarea name="mail" id="message" class="section_form_message_textarea" rows="15" placeholder="Type your mail"></textarea>
+            <label class="message-error" for="message" id="messageError">Veuillez renseigner votre message.</label>
+
+            <button class="section_form-button button-blue" type="submit">Submit</button>
         </form>
     </section>
-
     <footer>
         <div class="footer_placement">
             <a href="index.html"> About </a>-
             <a href="index.html"> Contact </a>-
             <a href="index.html"> Terms of use </a>-
             <a href="index.html"> Privacy police </a>
-        </nav>
-        <p>My website 2022 - All rights reserved</p>
+            </nav>
+            <p>My website 2022 - All rights reserved</p>
         </div>
     </footer>
-
+<script src="./scss/app.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </body>
 
 </html>
