@@ -22,7 +22,7 @@
         display: flex;
         border-radius: 20px;
         border-style: none;
-        padding: 12px 20px;
+        padding: 12px 2px;
 
     } 
     &_message textarea {
@@ -32,8 +32,12 @@
         margin-top: 15px;
         border-radius: 20px;
     }
-    textarea::placeholder {
-        padding: 10px;
+    textarea{
+        text-indent: 11px;
+    }
+    input{
+        text-indent: 11px;
+        
     }
     & h2 {
         text-align: center;
