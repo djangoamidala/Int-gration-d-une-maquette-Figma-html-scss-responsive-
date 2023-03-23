@@ -10,8 +10,8 @@ formContact.addEventListener('submit', (event) => {
     const emailInput = document.getElementById("email");
     const phoneInput = document.getElementById("phone");
     const messageInput = document.getElementById("message");
-
-
+    const closeBtn = document.getElementsByClassName('close')[0];
+    
     // Create list of values keys to get text fields
     const formData = {
         firstName: firstNameInput.value,
@@ -28,30 +28,30 @@ formContact.addEventListener('submit', (event) => {
         phone: false,
         message: false
     }
-
+    
     // Get all errors messages in HTML by ID
     const firstNameError = document.getElementById('firstNameError');
     const lastNameError = document.getElementById('lastNameError');
     const emailError = document.getElementById('emailError');
     const phoneError = document.getElementById('phoneError');
     const messageError = document.getElementById('messageError');
-
-
+    
+    
     // Unshow label
     firstNameError.style.display = 'none';
     lastNameError.style.display = 'none';
     emailError.style.display = 'none';
     phoneError.style.display = 'none';
     messageError.style.display = 'none';
-
+    
     // check if the fields are filled
-
+    
     const emailRegex = /[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}/igm;
     const nameRegex = /^[a-zA-Z ]+$/;
     const phoneRegex = /^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$/;
-
-
-
+    
+    
+    
     // We check each field one after another
     if (!formData.firstName || !nameRegex.test(formData.firstName)) {
         // if field are not filled errors = True
@@ -60,7 +60,7 @@ formContact.addEventListener('submit', (event) => {
     }
     if (!formData.lastName || !nameRegex.test(formData.lastName)) {
         errors.lastName = true;
-        firstNameError.style.display = 'block';
+        lastNameError.style.display = 'block';
     }
     if (!formData.email || !emailRegex.test(formData.email)) {
         errors.email = true;
@@ -74,14 +74,14 @@ formContact.addEventListener('submit', (event) => {
         errors.message = true;
         messageError.style.display = 'block';
     }
-
-
+    
+    
     if (Object.values(errors).includes(true)) {
         // forEach with errors list to print corresponding errors messages
         Object.entries(errors).forEach(function (error) {
             const key = error[0];
             const value = error[1];
-
+            
             if (value) {
                 if (key === 'firstName') {
                     firstNameError.style.display = 'block';
@@ -104,11 +104,13 @@ formContact.addEventListener('submit', (event) => {
         console.log(formData)
         // alert("Request sent")
         axios.post("http://212.83.176.255:3030/contact", formData,{
-
+            
         })
-            .then(function (response) {
-                console.log(response.data.message);
-                formContact.appendChild(document.createTextNode(response.data.message));
-            })
+        .then(function (response) {
+            modal.style.display = 'block';
+            closeBtn.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+        })
     }
 })
